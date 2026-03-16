@@ -1,0 +1,146 @@
+/* PAGE BACKGROUND */
+
+.enrollment-success-page{
+min-height:80vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:40px 20px;
+background:#111;
+}
+
+/* CONTAINER */
+
+.container{
+background:#1b1b1b;
+padding:40px;
+border-radius:12px;
+width:100%;
+max-width:550px;
+border:1px solid #333;
+box-shadow:0 10px 30px rgba(0,0,0,0.6);
+text-align:center;
+}
+
+/* TITLE */
+
+.section-title{
+color:#ff9800;
+font-size:26px;
+margin-bottom:20px;
+}
+
+/* INFO MESSAGE */
+
+.info-message{
+color:#ddd;
+font-size:15px;
+line-height:1.6;
+margin-bottom:20px;
+}
+
+/* QR CODE */
+
+.qr-code-container{
+margin:25px 0;
+}
+
+.qr-code-container img{
+width:220px;
+max-width:100%;
+border-radius:10px;
+border:3px solid #ff9800;
+padding:10px;
+background:#fff;
+}
+
+/* INSTRUCTIONS */
+
+.instructions{
+font-size:14px;
+color:#bbb;
+margin-bottom:25px;
+}
+
+/* BUTTON GROUP */
+
+.btn-group{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
+/* PRIMARY BUTTON */
+
+/* .btn{
+background:#ff9800;
+color:white;
+padding:10px 22px;
+border-radius:6px;
+text-decoration:none;
+font-size:14px;
+font-weight:600;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#e68900;
+transform:translateY(-2px);
+box-shadow:0 6px 15px rgba(0,0,0,0.4);
+} */
+
+/* OUTLINE BUTTON */
+
+    /* .btn-outline{
+    border:2px solid #ff9800;
+    color:#ff9800;
+    padding:9px 20px;
+    border-radius:6px;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+    transition:0.3s;
+    }
+
+    .btn-outline:hover{
+    background:#ff9800;
+    color:white;
+    } */
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width:768px){
+
+.container{
+padding:30px 20px;
+}
+
+.section-title{
+font-size:22px;
+}
+
+.info-message{
+font-size:14px;
+}
+
+.instructions{
+font-size:13px;
+}
+
+.qr-code-container img{
+width:180px;
+}
+
+.btn-group{
+flex-direction:column;
+gap:10px;
+}
+
+.btn,
+.btn-outline{
+width:100%;
+text-align:center;
+}
+
+}

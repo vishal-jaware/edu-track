@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Enrollment Successful</title>
+
+  <link rel="stylesheet" href="/footer.css" />
+</head>
+<body>
+  <style>
+    /* ENROLLMENT SUCCESS PAGE */
+
+.enrollment-success-page{
+min-height:80vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:40px 20px;
+background:#111;
+}
+
+/* CONTAINER */
+
+.container{
+background:#1b1b1b;
+padding:40px;
+border-radius:12px;
+width:100%;
+max-width:600px;
+border:1px solid #333;
+box-shadow:0 10px 25px rgba(0,0,0,0.6);
+text-align:center;
+}
+
+/* TITLE */
+
+.section-title{
+font-size:28px;
+color:#4caf50;
+margin-bottom:20px;
+}
+
+/* MESSAGE */
+
+.welcome-message{
+font-size:18px;
+color:#ddd;
+margin-top:10px;
+}
+
+/* BUTTON CENTER */
+
+.center-btn{
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+/* BUTTON STYLE */
+
+.btn-outline{
+padding:10px 20px;
+border:1px solid #4caf50;
+color:#4caf50;
+text-decoration:none;
+border-radius:6px;
+transition:0.3s;
+font-size:15px;
+}
+
+.btn-outline:hover{
+background:#4caf50;
+color:#fff;
+}
+  </style>
+  
+  <%- include("nav") %>
+
+  <section class="enrollment-success-page">
+    <div class="container">
+      <h2 class="section-title">Enrollment Successful!</h2>
+
+      <p class="welcome-message">
+        Congratulation, <strong><%= username %></strong>! Your enrollment  is successful.
+      </p>
+
+     
+
+      <div class="center-btn" style="margin-top: 40px;">
+        <a href="/viewcourse" class="btn-outline">⬅ Back to Courses</a>
+      </div>
+    </div>
+  </section>
+
+  <%- include("footer") %>
+</body>
+</html>
