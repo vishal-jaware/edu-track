@@ -69,14 +69,27 @@
     </section>
 
 <script>
-
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("nav-links");
 
+// Toggle menu
 hamburger.addEventListener("click", () => {
     navLinks.classList.toggle("active");
 });
 
+// Close menu when clicking any link (mobile UX fix)
+document.querySelectorAll("#nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+    });
+});
+
+// Fix issue when resizing from mobile → desktop
+window.addEventListener("resize", () => {
+    if (window.innerWidth > 768) {
+        navLinks.classList.remove("active");
+    }
+});
 </script>
 
 </body>

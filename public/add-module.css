@@ -46,6 +46,33 @@ transition:0.3s;
 .nav-links a:hover{
 color:#ff9800;
 }
+/* HAMBURGER */
+.hamburger{
+  display:none;
+  font-size:26px;
+  color:#ff9800;
+  cursor:pointer;
+}
+
+/* MOBILE TOGGLE */
+@media(max-width:768px){
+
+  .hamburger{
+    display:block;
+  }
+
+  .nav-links{
+    display:none;
+    flex-direction:column;
+    width:100%;
+    text-align:center;
+  }
+
+  .nav-links.active{
+    display:flex;
+  }
+
+}
 
 /* MOBILE NAV */
 

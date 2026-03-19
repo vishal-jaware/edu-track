@@ -156,8 +156,8 @@ background:#e68900;
 <div class="logo">
 <a href="/">EduTrack Admin</a>
 </div>
-
-<ul class="nav-links">
+<div class="hamburger" id="hamburger">☰</div>
+<ul class="nav-links" id="nav-links">
 <li><a href="/admin">Dashboard</a></li>
 <li><a href="/course">Add Course</a></li>
 <li><a href="/manage-courses">Manage Courses</a></li>
@@ -222,7 +222,14 @@ required
 </div>
 
 </section>
+<script>
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("nav-links");
 
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+</script>
 </body>
 
 </html>
