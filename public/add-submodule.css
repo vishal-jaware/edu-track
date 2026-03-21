@@ -59,39 +59,36 @@
   cursor:pointer;
 }
 
-/* MOBILE TOGGLE */
 @media(max-width:768px){
 
   .hamburger{
     display:block;
   }
 
+  .navbar-container{
+    position:relative;
+  }
+
   .nav-links{
+    position:absolute;
+    top:90px;
+    left:0;
+    width:100%;
+    background:#222;
+    flex-direction:column;
+    text-align:center;
     display:none;
+    padding:15px 0;
+  }
+
+  .nav-links li{
+    margin:10px 0;
   }
 
   .nav-links.active{
     display:flex;
   }
 
-}
-
-/* MOBILE NAV */
-@media(max-width:991px) {
-  .navbar-collapse {
-    background:#222;
-    padding:15px;
-    border-left:2px solid #ff9800;
-    margin-top:10px;
-  }
-
-  .nav-links {
-    flex-direction:column;
-  }
-
-  .nav-links li a {
-    margin:10px 0 !important;
-  }
 }
 
 /* ==================================== */

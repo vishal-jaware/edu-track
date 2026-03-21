@@ -56,6 +56,42 @@ font-size:14px;
 color:#ff9800;
 }
 
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  color: #ff9800;
+  cursor: pointer;
+}
+
+/* MOBILE NAV */
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: block;
+  }
+
+  .navbar-container {
+    position: relative;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #222;
+    flex-direction: column;
+    text-align: center;
+    display: none;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
 /* PAGE */
 
 .edit-page{

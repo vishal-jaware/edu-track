@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Admin Dashboard</title>
-     <!-- Link your existing CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/manage-course.css">
 </head>
 
@@ -43,7 +43,6 @@
                     <div class="dashboard-card">
 
                         <!-- Course Image -->
-                        <!-- <img src="/upload/<%= course.image %>" alt="<%= course.title %>" class="card-image" /> -->
                          <img src="/upload/mern_stack_banner_200px.png" alt="<%= course.title %>" class="card-image" />
 
                         <h3>
@@ -77,14 +76,12 @@ hamburger.addEventListener("click", () => {
     navLinks.classList.toggle("active");
 });
 
-// Close menu when clicking any link (mobile UX fix)
 document.querySelectorAll("#nav-links a").forEach(link => {
     link.addEventListener("click", () => {
         navLinks.classList.remove("active");
     });
 });
 
-// Fix issue when resizing from mobile → desktop
 window.addEventListener("resize", () => {
     if (window.innerWidth > 768) {
         navLinks.classList.remove("active");

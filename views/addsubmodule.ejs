@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Add Module</title>
   <link rel="stylesheet" href="/add-submodule.css">
 </head>
@@ -21,7 +22,7 @@
   </div>
 </nav>
   <!-- Add Course Page -->
-  <section class="register-page"> <!-- Reusing layout from register/login -->
+  <section class="register-page"> 
     <div class="form-container">
       <h2>Add Sub Module</h2>
       <form class="register-form" action="/submodule" method="POST" enctype="multipart/form-data">
@@ -63,6 +64,13 @@ const navLinks = document.getElementById("nav-links");
 
 hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("active");
+});
+
+// close menu after click
+document.querySelectorAll("#nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+  });
 });
 </script>
   <%- include("footer") %>
