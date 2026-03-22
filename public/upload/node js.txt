@@ -1,0 +1,80 @@
+1. What is globalThis? 
+
+globalThis is a built-in object introduced in ES2020 (ES11) that is standard way to access to global object in any JavaScript environment — whether it’s Node.js, browsers, or others
+
+2.os module in node js
+
+The os module in Node.js is a built-in core module that provides utilities for interacting with the operating system — like getting information about the computer, CPU, memory, network interfaces, and more.
+
+3. path module in node js
+
+The path module in Node.js is a core (built-in) module that provides utilities for working with file and directory paths — in a way that works consistently across all operating systems (Windows, macOS, Linux).
+
+4. fs module in node js
+The fs (File System) module is a core (build-in) in Node.js allows you to work with the file system on your computer — such as creating, reading, writing, deleting(unlink), or updating(append) files and directories.
+  i) Asynchronous (non-blocking):
+     fs.readFile('example.txt', 'utf8', (err, data) => {
+       if (err) throw err;
+         console.log(data);
+     }); 
+   ii) Synchronous (blocking):
+       fs.readFileSync(filename, data, options)
+
+5. explain node.js architecture and work flow?
+
+┌─────────────────────────────────────┐
+│             Application             │
+│   (Your JS Code / Server logic)     │
+└─────────────────────────────────────┘
+                │
+                ▼
+┌─────────────────────────────────────┐
+│          Node.js Runtime            │
+│   (Built on Chrome V8 Engine)       │
+└─────────────────────────────────────┘
+     │          │           │
+     ▼          ▼           ▼
+ Event Loop   Callbacks   Thread Pool
+ (libuv)      Queue        (libuv)
+     │
+     ▼
+┌─────────────────────────────────────┐
+│         Operating System            │
+│  (File System, Network, etc.)       │
+└─────────────────────────────────────┘
+
+1. V8 Engine
+
+* Developed by Google, used in Chrome.
+* Converts your JavaScript code → machine code for fast execution.
+* Executes the main thread (JavaScript event loop).
+
+2. callback queue (task queue)
+
+The Callback Queue (also called the Task Queue) is a waiting area where all asynchronous callbacks (like from setTimeout(), setInterval(), or I/O tasks) are placed after they finish their background work — waiting to be executed by the Event Loop.
+
+3. Event Loop :- 
+The Event Loop in Node.js is the core mechanism that allows Node.js to handle asynchronous (non-blocking) operations — such as reading files, handling HTTP requests, or accessing databases — using a single thread.
+The event loop continuously checks if the call stack is empty. When it is not, it takes a callback from the queue and executes it.
+
+4. Thread Pool
+The Thread Pool is a group of background threads managed by libuv (the C library Node.js uses for asynchronous I/O operations).
+Even though Node.js runs JavaScript on a single main thread, it uses multiple threads behind the scenes to perform expensive or blocking tasks — like file I/O, DNS lookups, or encryption — without blocking the main thread.
+ 
+5. Libuv  
+ 
+libuv is a C library that powers Node.js’s ability to handle asynchronous, non-blocking I/O operations.
+
+Think of it as the engine that runs behind Node.js — it manages:
+The Event Loop 🌀
+The Thread Pool 🧵
+All the asynchronous I/O operations
+
+⚙️ Why Node.js Uses libuv
+
+Node.js itself is written in C++ (for the runtime) and JavaScript (for the API layer).
+However, JavaScript alone can’t directly interact with low-level OS features like file systems, network sockets, or threads.
+So, Node.js uses libuv — written in C — to handle all those OS-level operations efficiently and asynchronously.
+
+
+
